@@ -1,23 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tienda</title>
     <link rel="stylesheet" href="../CSS/estilos_tienda.css">
-    
+    <link rel="icon" href="../IMAGENES/javatech.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body>
     <header>
-        
-    
+
+
         <div class="header-section container">
-            <img class="logo" src="./images/logoShop.png" alt="">
+            <img class="logo" src="../IMAGENES/javatech.ico" alt="">
+
+            <nav>
+                <div class="neon1">
+                    <span id="span5"></span>
+                    <span id="span6"></span>
+                    <span id="span8"></span>
+                    <a href="../index.html">JAVATECH </a>
+                </div>
+    
+                <div class="neon1">
+                    <span id="span5"></span>
+                    <span id="span6"></span>
+                    <span id="span8"></span>
+                    <a href="./Sucursales.html">SEDES <i class="fas fa-regular fa-location-dot"></i></a>
+                </div>
+    
+    
+                <div class="neon1">
+                    <span id="span5"></span>
+                    <span id="span6"></span>
+                    <span id="span8"></span>
+                    <a href="./serviciotecnico.html">SERVICIO TECNICO <i class="fas fa-regular fa-display"></i></a>
+                </div>
+    
+                <div class="neon1">
+                    <span id="span5"></span>
+                    <span id="span6"></span>
+                    <span id="span8"></span>
+                    <a href="./tienda.html">TIENDA <i class="fas fa-solid fa-shop"></i></a>
+                </div>
+    
+                <!--<div class="neon1">
+                    <span id="span5"></span>
+                    <span id="span6"></span>
+                    <span id="span8"></span>
+                    <a href="#">CARRITO <i class="fas fa-duotone fa-cart-shopping"></i></a> 
+                </div>-->
+            </nav>
+
             <div>
-                <img onmouseover="showCart(this)" class="cart" src="./images/cart.png" alt="">
+                <img onmouseover="showCart(this)" class="cart" src="../IMAGENES/icono-carrito.png" alt="">
                 <p class="count-product">0</p>
             </div>
+            
             <div class="cart-products" id="products-id">
                 <p class="close-btn" onclick="closeBtn()">X</p>
                 <h3>Mi carrito</h3>
@@ -149,17 +192,77 @@
     <footer>
         <h6>Developed by <span>Javistas Dev Team</span>
         </h6>
+        <div class="contenedor-footer">
+            <div class="neon">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span4"></span>
+                <div class="content-foo">
+                    <a href="./Sucursales.html">Nuestras Sedes</a>
+                </div>
+            </div>
+            <div class="neon">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span4"></span>
+                <div class="content-foo">
+                    <a href="./terminosycondiciones.html">Servicio Técnico</a>
+                </div>
+            </div>
+            <div class="neon">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span4"></span>
+                <div class="content-foo">
+                    <a href="./terminosycondiciones.html">Términos y Condiciones</a>
+                </div>
+            </div>
+            <div class="neon">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span4"></span>
+                <div class="content-foo">
+                    <a href="./tienda.html">Tienda</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pie-pagina">
+
+            <br>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <br>
+                <div class="red-social">
+                    <a href="#" class="icon"><img src="../IMAGENES/face.svg " alt="F"></a>
+                    <a href="#" class="icon"><img src="../IMAGENES/ins.svg" alt="I"></a>
+                    <a href="#" class="icon"><img src="../IMAGENES/tw.svg" alt="T"></a>
+                    <a href="#" class="icon"><img src="../IMAGENES/you.svg" alt="Y"></a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="grupo-1">
+                <small> &copy;2022 <b>Javatech</b> - Todos los Derechos Reservados </small>
+
+            </div>
+
+
+        </div>
+        </div>
     </footer>
 
     <script>
-        function showCart(x){
+        function showCart(x) {
             document.getElementById("products-id").style.display = "block";
         }
-        function closeBtn(){
-             document.getElementById("products-id").style.display = "none";
+        function closeBtn() {
+            document.getElementById("products-id").style.display = "none";
         }
 
     </script>
-    <script src="../JS/tienda.js" ></script>
+    <script src="../JS/tienda.js"></script>
 </body>
+
 </html>
