@@ -1,5 +1,6 @@
 body{
     font-family: system-ui;
+    background-color: #17202A;
 }
 header{
     background-color: #e4e4e8;
@@ -83,18 +84,27 @@ header{
 
 .carts{
     max-width: 250px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    box-shadow: 1px 1px 1px 1px whitesmoke;
     padding-bottom: 34px;
     margin-bottom: 40px;
+    cursor: default;
+    transition: all 400ms ease  ;
+}
+.carts:hover
+{
+    box-shadow:  0 0 8px 7px #82E4ED;
+    transform: translateY(-3%);
 }
 .carts img{
     width: 100%;
+    height: 150px;
 }
 .carts p{
     font-family: system-ui;
     font-weight: 500;
     padding: 0 20px;
     margin-bottom: 24px;
+    color: #82E4ED;
 }
 .carts div p{
     position: absolute;
