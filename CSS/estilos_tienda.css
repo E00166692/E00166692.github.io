@@ -233,7 +233,6 @@ main{
     position: relative;
     cursor: pointer;
     width: 720px;
-    box-shadow:  0 0 9px 7px #82E4ED;
     object-fit: cover;
     display: block;
 }
@@ -250,7 +249,7 @@ main{
 
 
 nav{
-    text-align: right;
+    text-align: right!important;
     padding: 20px;
     
 }
@@ -327,6 +326,9 @@ p{
     text-align: center;
 }
 
+.negro{
+    color:rgb(31, 30, 30)
+}
 
 
 .pie-pagina h2{
