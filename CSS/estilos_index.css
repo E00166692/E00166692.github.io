@@ -33,19 +33,78 @@ a{
 }
 
 section.textos-principal{
-    display: flex;
     height: 400px;
     width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+
+
 }
 
-.textos-principal h1{
-    color: #82E4ED;
-    font-size: 50px;
-    font-weight: 100;
+.textos-principal span{
+    font-size: 120pt;
+    font-weight: bold;
+    font-family: "Fredoka One";
+    transition: all 300ms ease-in-out;
+}
+
+
+.textos-principal span::before {
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+}
+.textos-principal span::after {
+    content: var(--l);
+    position: absolute;
+    height: 200%;
+    width: 300px;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+.textos-principal span:hover {
+    filter: contrast(250%);
+}
+.textos-principal span:nth-child(1) {
+    color: #00bef8;
+}
+.textos-principal span:nth-child(2) {
+    color: #ff0697;
+}
+.textos-principal  span:nth-child(3) {
+    color: #ff4d00;
+}
+.textos-principal  span:nth-child(4) {
+    color: #ffe600;
+}
+.textos-principal  span:nth-child(5) {
+    color: #bb00ff;
+}
+  .textos-principal span:nth-child(6) {
+    color: #00bef8;
+}
+.textos-principal span:nth-child(7) {
+    color: #ff0697;
+}
+.textos-principal  span:nth-child(8) {
+    color: #ff4d00;
+}
+.textos-principal  span:nth-child(9) {
+    color: #ffe600;
+}
+.textos-principal  span:nth-child(10) {
+    color: #bb00ff;
+}
+  .textos-principal span:nth-child(11) {
+    color: #00bef8;
+}
+.textos-principal span:nth-child(12) {
+    color: #ff0697;
 }
 
 .textos-principal h2{
