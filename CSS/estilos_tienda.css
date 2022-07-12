@@ -451,18 +451,7 @@ p{
         transition: 2s;
         transition-delay: 0.25s;
     }
-    #span4{
-        bottom: -100%;
-        left: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(360deg,transparent, #82E4ED );
-    }
-    .neon:hover #span4{
-        bottom: 100%;
-        transition: 2s;
-        transition-delay: 0.75s;
-    }
+   
     
     .neon1{
         padding: 10px 0px;

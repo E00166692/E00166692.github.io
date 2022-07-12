@@ -1,137 +1,268 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/estilos2.css">
-    <title>Registrate</title>
+    <link rel="stylesheet" href="../CSS/estilo_usuario.css">
     <link rel="icon" href="../IMAGENES/javatech.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Usuarios</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="neon1">
-                <span id="span5"></span>
-                <span id="span6"></span>
-                <span id="span8"></span>
-                <a href="../index.html">JAVATECH </a>
-            </div>
+    <div class="container"> 
+
+    
+            <header>
+                <nav>
+                    <div class="neon1">
+                        <span id="span5"></span>
+                        <span id="span6"></span>
+                        <span id="span8"></span>
+                        <a href="../index.html">JAVATECH </a>
+                    </div>
+
+                    <div class="neon1">
+                        <span id="span5"></span>
+                        <span id="span6"></span>
+                        <span id="span8"></span>
+                        <a href="./Sucursales.html">SEDES <i class="fas fa-regular fa-location-dot"></i></a>
+                    </div>
+
+
+                    <div class="neon1">
+                        <span id="span5"></span>
+                        <span id="span6"></span>
+                        <span id="span8"></span>
+                        <a href="./serviciotecnico.html">SERVICIO TECNICO <i class="fas fa-regular fa-display"></i></a>
+                    </div>
+
+                    <div class="neon1">
+                        <span id="span5"></span>
+                        <span id="span6"></span>
+                        <span id="span8"></span>
+                        <a href="./tienda.html">TIENDA <i class="fas fa-solid fa-shop"></i></a>
+                    </div>
+
+                    <div class="neon1">
+                        <span id="span5"></span>
+                        <span id="span6"></span>
+                        <span id="span8"></span>
+                        <a href="./usuarios.html ">LOG-IN </i></a>
+                    </div>
+
+                    <!--<div class="neon1">
+                        <span id="span5"></span>
+                        <span id="span6"></span>
+                        <span id="span8"></span>
+                        <a href="#">CARRITO <i class="fas fa-duotone fa-cart-shopping"></i></a> 
+                    </div>-->
+                </nav>
+            </header>
             
-            <div class="neon1">
-                <span id="span5"></span>
-                <span id="span6"></span>
-                <span id="span8"></span>
-                <a href="./Sucursales.html">SEDES <i class="fas fa-regular fa-location-dot"></i></a>
-            </div>
+                <div class="bodys">
+                    <div id="contenedor1" style=" display:flex; gap: 10px; flex-wrap: wrap; justify-content: center; ">
+                        <div>
+                            <form name="form" action="" class="form-serviciotecnico" id="form" onsubmit="" return" validar();">
+                                <h1>Registrate</h1>
+                                <p>Completa el siguiente formulario para poder registrarte.</p>
+                                <label for="nom">Nombre:</label>
+                                <input type="text" id="nom" placeholder="Ingrese su nombre" name="nombre"
+                                    pattern="[A-Za-záéíóúÁÉÍÓÚñÑ .-_]{1,200}" required>
+                                <label for="ape">Apellido:</label>
+                                <input type="text" id="ape" placeholder="Ingrese su apellido" name="apellido" " required>
+                                <label for=" mail" id="usr">E-Mail:</label>
+                                <input type="email" id="usr" placeholder="Ingrese su email">
+                                <label id="pwd" for="con">Contraseña:</label>
+                                <input type="password" id="pwd" placeholder="Ingrese su contraseña">
+                                
+                                
+                                <input type=" reset" value="Limpiar" class="botones">
 
+                                <button id="btnRegistrar" class="botones">Registrar</button>
+                                <h3 id="login"></h3>
+                                <button id='btnCerrar'>Cerrar</button>
 
-            <div class="neon1">
-                <span id="span5"></span>
-                <span id="span6"></span>
-                <span id="span8"></span>
-                <a href="./serviciotecnico.html">SERVICIO TECNICO <i class="fas fa-regular fa-display"></i></a>
-            </div>
-
-            <div class="neon1">
-                <span id="span5"></span>
-                <span id="span6"></span>
-                <span id="span8"></span>
-                <a href="./tienda.html">TIENDA <i class="fas fa-solid fa-shop"></i></a>
-            </div>
-
-            <!--<div class="neon1">
-                <span id="span5"></span>
-                <span id="span6"></span>
-                <span id="span8"></span>
-                <a href="#">CARRITO <i class="fas fa-duotone fa-cart-shopping"></i></a> 
-            </div>-->
-        </nav>
-    </header>
-      <section class="Nuestros-Productos">
-    <div class="Cuenta-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-2">
-                    <div class="form-container">
-                        <div class="form-btn">
-                            <span onclick="register()">Registrarse</span>  
-                            <hr id="indicador">
+                            </form>
+                            <form name="form" action="" class="form-serviciotecnico" id="form1" onsubmit="" return" validar();">
+                                <h1>Área de acceso</h1>
+                                <input type="email" id="usrAcc" placeholder="Ingrese su email">
+                                <input type="password" id="pwdAcc" placeholder="Ingrese su contraseña">
+                                <button id="btnAcceder" class="botones">Acceder</button>
+                            </form>
                         </div>
-                        <form id="registrarseform">
-                            <input type="text" placeholder="Usuario">
-                            <input type="email" placeholder="Correo electrónico">
-                            <input type="password" placeholder="Contraseña">
-                            <button type="submit" class="btn">Registrarse</button>
-                        </form>
+
+                    </div>
+
+                </div>
+            
+
+
+
+            <footer>
+                <div class="contenedor-footer">
+                    <div class="neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span4"></span>
+                        <div class="content-foo">
+                            <a href="./Sucursales.html">Nuestras Sedes</a>
+                        </div>
+                    </div>
+                    <div class="neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span4"></span>
+                        <div class="content-foo">
+                            <a href="./terminosycondiciones.html">Servicio Técnico</a>
+                        </div>
+                    </div>
+                    <div class="neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span4"></span>
+                        <div class="content-foo">
+                            <a href="./terminosycondiciones.html">Términos y Condiciones</a>
+                        </div>
+                    </div>
+                    <div class="neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span4"></span>
+                        <div class="content-foo">
+                            <a href="./tienda.html">Tienda</a>
+                        </div>
+                    </div>
+                    <div class="neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span4"></span>
+                        <div class="content-foo">
+                            <a href="./usuarios.html ">Log-in</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+
+                <div class="pie-pagina">
+
+                    <br>
+                    <div class="box">
+                        <h2>SIGUENOS</h2>
+                        <br>
+                        <div class="red-social">
+                            <a href="#" class="icon"><img src="../IMAGENES/face.svg " alt="F"></a>
+                            <a href="#" class="icon"><img src="../IMAGENES/ins.svg" alt="I"></a>
+                            <a href="#" class="icon"><img src="../IMAGENES/tw.svg" alt="T"></a>
+                            <a href="#" class="icon"><img src="../IMAGENES/you.svg" alt="Y"></a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div class="grupo-1">
+                        <small> &copy;2022 <b>Javatech</b> - Todos los Derechos Reservados </small>
+
+                    </div>
+
+
+                </div>
+                </div>
+            </footer>
     </div>
-    </section>
-    <footer>
-        <div class="contenedor-footer" >
-            <div class="neon">
-                <span id="span1"></span>
-                <span id="span2"></span>
-                <span id="span4"></span>
-                    <div class="content-foo">
-                        <a href="./Sucursales.html" >Nuestras Sedes</a>
-                    </div>
-            </div>
-            <div class="neon">
-                <span id="span1"></span>
-                <span id="span2"></span>
-                <span id="span4"></span>
-                <div class="content-foo">
-                    <a href="./terminosycondiciones.html">Servicio Técnico</a>
-                </div>
-            </div>
-            <div class="neon">
-                <span id="span1"></span>
-                <span id="span2"></span>
-                <span id="span4"></span>
-                <div class="content-foo">
-                    <a href="./terminosycondiciones.html">Términos y Condiciones</a>
-                </div>
-            </div>
-            <div class="neon">
-                <span id="span1"></span>
-                <span id="span2"></span>
-                <span id="span4"></span>
-                <div class="content-foo">
-                    <a href="./tienda.html">Tienda</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="pie-pagina">
-
-                <br>
-            <div class="box">
-                <h2>SIGUENOS</h2>
-                <br>
-                    <div class="red-social">
-                        <a href="#" class="icon"><img src="../IMAGENES/face.svg " alt="F" ></a>
-                        <a href="#" class="icon"><img src="../IMAGENES/ins.svg" alt="I"></a>
-                        <a href="#" class="icon"><img src="../IMAGENES/tw.svg" alt="T"></a>
-                        <a href="#" class="icon"><img src="../IMAGENES/you.svg" alt="Y"></a>
-                    </div>
-            </div>
-        </div>
-        <br><br>
-        <div>
-        <div class="grupo-1">
-            <small> &copy;2022 <b>Javatech</b> - Todos los Derechos Reservados </small>
-
-        </div>
 
 
-        </div>
-        </div>
-    </footer>
+    <script type="module">
+
+   // Import the functions you need from the SDKs you need
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        //  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+     
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+         // Your web app's Firebase configuration
+         const firebaseConfig = {
+            apiKey: "AIzaSyCuVwkMUczdSwcG21TxtWobejJHfriw0J0",
+            authDomain: "java-tec.firebaseapp.com",
+            projectId: "java-tec",
+            storageBucket: "java-tec.appspot.com",
+            messagingSenderId: "478339317346",
+            appId: "1:478339317346:web:c7fa6289b3fd85f3ab5b3b"
+        };
+       // Initialize Firebase
+       const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);        
+
+        document.getElementById("btnRegistrar").addEventListener("click", () =>
+            {
+                var correo = document.getElementById("usr").value;
+                var password = document.getElementById("pwd").value;
+
+                createUserWithEmailAndPassword(auth, correo, password)
+                .then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    // ...
+                    alert("Usuario creado");
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // ..
+                    alert("Mensaje de error:" + error.code + "-"+ error.message);
+                });
+            }
+        )
+
+        document.getElementById("btnAcceder").addEventListener("click",() =>
+            {
+                var correo = document.getElementById("usrAcc").value;
+                var password = document.getElementById("pwdAcc").value;
+
+                signInWithEmailAndPassword(auth, correo, password)
+                .then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    // ...
+                    alert("Acceso correcto");
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert("Mensaje de error:" + error.code + "-"+ error.message);
+                });
+            })
+        
+        onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/firebase.User
+            const uid = user.uid;
+            // ...
+            document.getElementById("btnCerrar").disabled=false;
+            document.getElementById("login").innerHTML="Logueado como "+ user.email;
+
+        } else {
+            // User is signed out
+            // ...
+            document.getElementById("btnCerrar").disabled=true;
+            document.getElementById("login").innerHTML="No Logueado";
+        }
+        });
+
+        document.getElementById("btnCerrar").addEventListener("click",() =>
+            {                
+                signOut(auth).then(() => {
+                // Sign-out successful.
+                    alert("Cerraste sesion correctamente")
+                }).catch((error) => {
+                // An error happened.
+                    alert("Mensaje de error:" + error.code + "-"+ error.message);
+                });
+            })
+    </script>
 </body>
+
 </html>
