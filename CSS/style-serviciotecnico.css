@@ -17,17 +17,15 @@ body {
 }
 
 .form-serviciotecnico {
-    width: 800px;
-    margin: 30px;
+    display: inline-flexbox;
+    text-decoration: none;
+    width: fit-content;
+    max-width: 50%;
+    margin: auto;
     background-color: rgba(0, 0, 0,0.8);
     padding: 50px;
-    box-sizing: border-box;
-    float: left;
-
-   
     border-radius: 10px;
     filter: brightness(70%);
-    /* float: left; */
 }
 .form-serviciotecnico:hover {
     filter: brightness(130%);

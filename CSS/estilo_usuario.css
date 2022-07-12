@@ -1,48 +1,103 @@
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    margin-bottom: 0;
 }
 
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 100%;
     display: flexbox;
+
 }
 
-
-main{
+.container{
     background-color: rgb(31, 30, 30);
+    display: flexbox;
+    width: auto;
 }
 
-
-.part1{
-    background-color: black;
-    padding: 60px 0;
-    width: 90%;
-    max-width: 1000%;
+.form-serviciotecnico {
+    display: inline-flexbox;
+    text-decoration: none;
+    width: fit-content;
+    max-width: 50%;
     margin: auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    box-shadow:  0 0 5px 5px #82E4ED;
+    background-color: rgba(0, 0, 0,0.8);
+    padding: 50px;
+    border-radius: 10px;
+    filter: brightness(70%);
+
     
 }
+.form-serviciotecnico:hover {
+    filter: brightness(130%);
+}
 
-.part2{
-    background-color: black;
-    padding: 60px 0;
-    width: 90%;
-    max-width: 1000%;
-    margin: auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    box-shadow:  0 5px 5px 5px #82E4ED;
-    }
 
+label {
+    color: white;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+h1 {
+    color: #82E4ED;
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: white;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+input, select, textarea, button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: none;
+}
+.botones {
+    background-color: #31384A;
+    color: white;
+    padding: 20px;
+    filter: brightness(70%);
+    text-align: center;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.botones:hover {
+    cursor: pointer;
+    background-color: #1C2833;
+    filter: brightness(130%);
+}
+a {
+    margin: left;
+}
+.boton{
+    color: aqua;
+ 
+}
 
 header{
     width: 100%;
@@ -51,12 +106,13 @@ header{
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+        
+    
 }
-
-
 nav{
     text-align: center;
     padding: 20px;
+    
 }
 
 
@@ -96,13 +152,7 @@ center{
 }
 
 
-h1{
-    color: black;
-    font-size: 55px;
-    font-weight: 100px;
-    text-align: center;
-    
-}
+
 
 h2{
     color: #82E4ED;
@@ -124,12 +174,7 @@ h4{
     font-weight: 100;
     text-align: center;
 }
-p{
-    color: white;
-    font-size: 10px;
-    font-weight: 100;
-    text-align: center;
-}
+
 
 
 
@@ -176,241 +221,124 @@ p{
 }
 
 
-    .neon{
-        padding: 15px 30px;
-        text-decoration: none;
-        overflow: hidden;
-        transition: 0.2s;
-        display: block;
-    
-    }
-    .neon:hover{
-        background: #82E4ED;
-        box-shadow: 0 0 10px #82E4ED, 0 0 40px #82E4ED, 0 0 80px #82E4ED;
-        transition-delay: 1s;
-        color: #000;
-        
-    
-    }
-    .neon span{
-        position: absolute;
-        display: block;
-    }
-    #span1{
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg,transparent, #82E4ED );
-    }
-    .neon:hover #span1{
-        left: 100%;
-        transition: 1s;
-    }
-    #span2{
-        top: -100%;
-        right: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(180deg,transparent, #82E4ED );
-    }
-    .neon:hover #span2{
-        top: 100%;
-        transition: 2s;
-        transition-delay: 0.25s;
-    }
-    #span4{
-        bottom: -100%;
-        left: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(360deg,transparent, #82E4ED );
-    }
-    .neon:hover #span4{
-        bottom: 100%;
-        transition: 2s;
-        transition-delay: 0.75s;
-    }
-    
-    .neon1{
-        padding: 10px 0px;
-        text-decoration: none;
-        overflow: hidden;
-        transition: 0.2s;
-        display: inline-block;
-    
-    }
-    .neon1:hover{
-        background: #82E4ED;
-        box-shadow: 0 0 10px #82E4ED, 0 0 40px #82E4ED, 0 0 80px #82E4ED;
-        transition-delay: .2s;
-        color: white;
-        text-decoration: underline;
-    
-    }
-    .neon1 span{
-        position: absolute;
-        display: block;
-    }
-    #span5{
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg,transparent, #82E4ED );
-    }
-    .neon:hover #span5{
-        left: 100%;
-        transition: 1s;
-    }
-    
-    
-    #span6{
-        top: -100%;
-        right: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(180deg,transparent, #82E4ED );
-    }
-    .neon:hover #span6{
-        top: 100%;
-        transition: 2s;
-        transition-delay: 0.25s;
-    }
-    #span8{
-        bottom: -100%;
-        left: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(360deg,transparent, #82E4ED );
-    }
-    .neon:hover #span8{
-        bottom: 100%;
-        transition: 2s;
-        transition-delay: 0.75s;
-    }
 
-    .sometxt {
-        display: block;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;      
-    }
-    
-    .mydiv {
-        position: relative;
-        margin: 10% auto 0;
-        width: 70%;
-        height: 200px;
-        background: linear-gradient(90deg, #000, #323232); 
-        z-index: 0;
-        border-radius: 5px;
-        overflow: hidden;
-        padding: 2rem;
-    }
+.neon{
+    padding: 15px 30px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    display: block;
 
-   
+}
+.neon:hover{
+    background: #82E4ED;
+    box-shadow: 0 0 10px #82E4ED, 0 0 40px #82E4ED, 0 0 80px #82E4ED;
+    transition-delay: 1s;
+    color: #000;
     
-   
 
-    .bodys{
-        background-color: rgba(0, 0, 0,0.8);
-        display: flex;
-        
-        
-    }
-    .form-serviciotecnico {
-        width: 800px;
-        margin: 30px;
-        background-color: rgba(0, 0, 0,0.8);
-        padding: 50px;
-        box-sizing: border-box;
-        float: left;
-             
-        border-radius: 10px;
-        filter: brightness(70%);
-        margin-right: auto;
-        margin-left: 20%;
-        
-    }
-    .form-serviciotecnico:hover {
-        filter: brightness(130%);
-    }
-    .form1-serviciotecnico {
-        width: 800px;
-        margin: 30px;
-        background-color: rgba(0, 0, 0,0.8);
-        padding: 50px;
-        box-sizing: border-box;
-        float: left;
-             
-        border-radius: 10px;
-        filter: brightness(70%);
-        margin-right: auto;
-        margin-left: 20%;
-        
-    }
-    .form1-serviciotecnico:hover {
-        filter: brightness(130%);
-    }
-    label {
-        color: white;
-        margin: 0;
-        margin-bottom: 20px;
-        font-size: 20px;
-    }
-    h1 {
-        color: #82E4ED;
-        text-align: center;
-        margin: 0;
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-    
-    h4 {
-        color: white;
-        text-align: center;
-        margin: 0;
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-    
-    p {
-        color: white;
-        margin: 0;
-        margin-bottom: 20px;
-        font-size: 20px;
-    }
-    input, select, textarea, button {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 7px;
-        box-sizing: border-box;
-        font-size: 20px;
-        border: none;
-    }
-    .botones {
-        background-color: #31384A;
-        color: white;
-        padding: 20px;
-        filter: brightness(70%);
-        text-align: center;
-    }
-    
-    textarea {
-        min-height: 100px;
-        max-height: 200px;
-    }
-    
-    .botones:hover {
-        cursor: pointer;
-        background-color: #1C2833;
-        filter: brightness(130%);
-    }
-    a {
-        margin: left;
-    }
-    .boton{
-        color: aqua;
-     
-    }
+}
+.neon span{
+    position: absolute;
+    display: block;
+}
+
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent, #82E4ED );
+}
+.neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent, #82E4ED );
+}
+.neon:hover #span2{
+    top: 100%;
+    transition: 2s;
+    transition-delay: 0.25s;
+}
+
+.neon1{
+    padding: 10px 0px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    display: inline-block;
+
+}
+.neon1:hover{
+    background: #82E4ED;
+    box-shadow: 0 0 10px #82E4ED, 0 0 40px #82E4ED, 0 0 80px #82E4ED;
+    transition-delay: .2s;
+    color: white;
+    text-decoration: underline;
+
+}
+.neon1 span{
+    position: absolute;
+    display: block;
+}
+#span5{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent, #82E4ED );
+}
+.neon:hover #span5{
+    left: 100%;
+    transition: 1s;
+}
+
+#span6{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent, #82E4ED );
+}
+.neon:hover #span6{
+    top: 100%;
+    transition: 2s;
+    transition-delay: 0.25s;
+}
+#span8{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent, #82E4ED );
+}
+.neon:hover #span8{
+    bottom: 100%;
+    transition: 2s;
+    transition-delay: 0.75s;
+}
+
+.sometxt {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
+}
+
+.mydiv {
+    position: relative;
+    margin: 10% auto 0;
+    width: 70%;
+    height: 200px;
+    background: linear-gradient(90deg, #000, #323232); 
+    z-index: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 2rem;
+}
