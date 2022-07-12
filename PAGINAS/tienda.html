@@ -204,6 +204,7 @@
                 <a href="" data-id="11" class="btn-add-cart">add to cart</a>
             </div>
         </div>
+        <div class="circle"> </div>
     </section>
 
     <footer>
@@ -275,9 +276,107 @@
 
 
         </div>
+        
         </div>
     </footer>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        //  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCuVwkMUczdSwcG21TxtWobejJHfriw0J0",
+            authDomain: "java-tec.firebaseapp.com",
+            projectId: "java-tec",
+            storageBucket: "java-tec.appspot.com",
+            messagingSenderId: "478339317346",
+            appId: "1:478339317346:web:c7fa6289b3fd85f3ab5b3b"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        //const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+
+        onAuthStateChanged(auth, (user) => {
+
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+                const uid = user.uid;
+                // ...
+                document.getElementById("btnCerrar").disabled = false;
+                document.getElementById("login").innerHTML = "Logeado como " + user.email;
+
+
+            } else {
+                // User is signed out
+                // ...
+                document.getElementById("btnCerrar").disabled = true;
+                document.getElementById("login").innerHTML = "No logueado";
+                alert("No logeado")
+
+            }
+        });
+
+
+        document.getElementById("btnEnviar").addEventListener("click", () => {
+            var correo = document.getElementById("usr").value;
+            var password = document.getElementById("pwd").value;
+
+            createUserWithEmailAndPassword(auth, correo, password)
+                .then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    // ...
+                    alert("Usuario creado");
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // ..
+                    alert("Mensaje de error:" + error.code + "-" + error.message);
+                });
+        }
+        )
+
+        document.getElementById("btnAcceder").addEventListener("click", () => {
+            var correo = document.getElementById("usrAcc").value;
+            var password = document.getElementById("pwdAcc").value;
+
+            signInWithEmailAndPassword(auth, correo, password)
+                .then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    // ...
+                    alert("Acceso correcto");
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert("Mensaje de error:" + error.code + "-" + error.message);
+                });
+        })
+
+        document.getElementById("btnCerrar").addEventListener("click", () => {
+            alert("Cerraste sesión")
+            signOut(auth).then(() => {
+                // Sign-out successful.
+                alert("Cerraste sesión correctamente")
+            }).catch((error) => {
+                // An error happened.
+                alert("Mensaje de error:" + error.code + "-" + error.message);
+            });
+
+        })
+
+
+    </script>
     <script>
         function showCart(x) {
             document.getElementById("products-id").style.display = "block";

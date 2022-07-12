@@ -342,3 +342,37 @@ h4{
     overflow: hidden;
     padding: 2rem;
 }
+.circle{
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 150px;
+    width: 150px;
+    background-color: #82E4ED;
+    border-radius: 50%;
+    opacity: .5;
+    position: absolute;
+    bottom: 0;
+    box-shadow: #fff;
+    animation: mover 20s alternate infinite;
+}
+
+@keyframes 
+    mover{
+        0%{
+            transform: translate(-20%);
+            background-color: #82E4ED;
+        }
+        25%{
+            transform: translate(500%);
+            background-color: #2ef8a0;
+        }
+        50%{
+            transform: translate(600%, 100%);
+            background-color: #c501e2;
+        }
+        75%{
+            transform: translate(0, 420%);
+            background-color: #3a2327;
+        }
+        
+    }

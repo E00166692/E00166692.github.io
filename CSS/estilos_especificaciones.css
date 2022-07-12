@@ -303,11 +303,11 @@ center{
             background-color: #82E4ED;
         }
         25%{
-            transform: translate(900%);
+            transform: translate(500%);
             background-color: #2ef8a0;
         }
         50%{
-            transform: translate(1000%, 100%);
+            transform: translate(600%, 100%);
             background-color: #c501e2;
         }
         75%{
@@ -315,4 +315,4 @@ center{
             background-color: #3a2327;
         }
         
-    }
+        }
